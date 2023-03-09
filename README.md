@@ -1,16 +1,15 @@
-# toDo App
+# toDo App using Provider/Consumer App Structure
 
-A new Flutter project.
+To Do App 
 
-## Getting Started
+# What i learned?
 
-This project is a starting point for a Flutter application.
+- How to use Provider App Structure? 
 
-A few resources to get you started if this is your first Flutter project:
+**- Flashcards questions - Checklist**
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+- Why use provider arc? "The provider folder contains our provider to connect the UI and application logic."
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+**- English flashcards - Checklist**
+
+- H
