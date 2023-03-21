@@ -4,11 +4,14 @@ To Do App
 
 # What i learned?
 
-- How to use Provider App Structure? 
+https://github.com/souemon16/simple_todo_app
+
+- How to use Provider App Structure. 
 
 **- Flashcards questions - Checklist**
 
-- Why use provider arc? "The provider folder contains our provider to connect the UI and application logic."
+- Why use provider arc? done
+- Dispose method usage in OOP programming?
 
 **- English flashcards - Checklist**
 

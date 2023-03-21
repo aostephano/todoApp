@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
+import '../model/Task.dart';
 import '../provider/MyAppState.dart';
 
 class AddTaskScreen extends StatefulWidget {
@@ -11,8 +12,26 @@ class AddTaskScreen extends StatefulWidget {
 }
 
 class _AddTaskScreenState extends State<AddTaskScreen> {
-  TextEditingController textController = TextEditingController();
-  String taskTitle = "";
+  final _textFieldController = TextEditingController();
+  String newTask = '';
+
+  void initState() {
+    super.initState();
+    _textFieldController.addListener(() {
+      newTask = _textFieldController.text;
+    });
+  }
+
+  //disposing the controller
+  @override
+  void dispose() {
+    _textFieldController.dispose();
+    super.dispose();
+  }
+
+  void _submit() {
+    _textFieldController.clear();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -24,7 +43,7 @@ class _AddTaskScreenState extends State<AddTaskScreen> {
       child: Column(
         children: [
           TextFormField(
-            controller: textController,
+            controller: _textFieldController,
             decoration: const InputDecoration(
               border: UnderlineInputBorder(),
               labelText: 'Enter your task',
@@ -36,10 +55,12 @@ class _AddTaskScreenState extends State<AddTaskScreen> {
           ElevatedButton(
               onPressed: () {
                 //Insert new Task on Provider
-                taskTitle = textController.text;
-                appState.addTask(taskTitle);
+                newTask = _textFieldController.text;
+                Task taskInstance = Task(newTask, false);
+                appState.addTask(taskInstance);
+                _submit();
               },
-              child: Text("Adicionar"))
+              child: Text("Add"))
         ],
       ),
     );

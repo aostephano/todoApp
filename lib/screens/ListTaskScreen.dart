@@ -23,15 +23,18 @@ class _ListTaskScreenState extends State<ListTaskScreen> {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               const Text("To Do List"),
-              for (var element in taskList)
+              // For loop to show multiple tasks in multiple widgets
+              for (var task in taskList)
                 ListTile(
                   leading: IconButton(
-                    onPressed: () {},
-                    icon: element.done
+                    onPressed: () {
+                      appState.toggleTask(task);
+                    },
+                    icon: task.done
                         ? Icon(Icons.check_box)
                         : Icon(Icons.check_box_outline_blank),
                   ),
-                  title: Text(element.toString()),
+                  title: Text(task.toString()),
                 )
             ],
           ),

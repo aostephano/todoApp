@@ -1,4 +1,9 @@
-class Task {
+import 'dart:html';
+
+import 'package:flutter/cupertino.dart';
+import 'package:provider/provider.dart';
+
+class Task extends ChangeNotifier {
   //Atributes
   late String _taskName;
   late bool _done = false;
@@ -23,5 +28,9 @@ class Task {
   @override
   String toString() {
     return taskName;
+  }
+
+  taskDone() {
+    done = !done;
   }
 }
