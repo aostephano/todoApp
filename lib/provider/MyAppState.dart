@@ -6,6 +6,11 @@ import '../model/Task.dart';
 class MyAppState extends ChangeNotifier {
   List<Task> taskList = <Task>[];
 
+  getDoneTasks(taskList) {
+    List doneTaskList = taskList.where((task) => task.done == true).toList();
+    return doneTaskList;
+  }
+
   addTask(taskInstance) {
     taskList.add(taskInstance);
     notifyListeners();

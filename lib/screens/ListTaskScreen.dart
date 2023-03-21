@@ -28,6 +28,7 @@ class _ListTaskScreenState extends State<ListTaskScreen> {
                 ListTile(
                   leading: IconButton(
                     onPressed: () {
+                      //change the checkbox value
                       appState.toggleTask(task);
                     },
                     icon: task.done
@@ -35,6 +36,11 @@ class _ListTaskScreenState extends State<ListTaskScreen> {
                         : Icon(Icons.check_box_outline_blank),
                   ),
                   title: Text(task.toString()),
+                  trailing: IconButton(
+                      onPressed: () {
+                        appState.deleteTask(task);
+                      },
+                      icon: const Icon(Icons.delete)),
                 )
             ],
           ),
