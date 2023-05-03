@@ -1,28 +1,48 @@
-# toDo App using Provider/Consumer App Structure
+# ToDo App
 
-To Do App
+> Flutter App using Provider AppState Pattern
 
-# What i learned?
-- How to use Provider App Structure in Flutter.
-- Dart code samples
-- How to toggle/create/delete elements in ListView
-- How to provide data to UI
-___
-### Search Fonts/Articles:
-https://www.alura.com.br/artigos/como-gerenciar-estados-com-flutter-provider
-https://souravsarkaremon16.medium.com/create-a-simple-todo-app-with-flutter-provider-ffabfe4c9d2f
+<img src="https://i.imgur.com/MRhjJ3H.png" alt="exemplo imagem" width="40%">
+<img src="https://i.imgur.com/4lxbI2I.png" alt="exemplo imagem" width="40%">
+<img src="https://i.imgur.com/XJfKlLu.png" alt="exemplo imagem" width="40%">
 
-____
-**- Flashcards questions - Checklist**
+> The classic To-Do appldsdication where a user can write down all the things he wants to accomplish.
 
-- Why use provider arc? done
-- Dispose method usage in OOP programming? done
-- Explain Where method to filter Lists? Code below: done
-getDoneTasks(taskList) {
-    List doneTaskList = taskList.where((task) => task.done == true).toList();
-    return doneTaskList;
-}
+###### Project idea
 
-**- English flashcards - Checklist**
+## 🚀 Installing <ToDo App>
 
-- dispose done
+To install ToDo App, follow these steps:
+
+Inside the folder, type:
+
+Linux e macOS:
+
+```
+flutter run
+```
+
+Windows:
+
+```
+flutter run
+```
+
+## ☕ Using <Border Radius Previewer>
+
+To use <Border Radius Previewer>, follow these steps:
+
+```
+Type the task in the first screen
+```
+```
+Mark as done or delete in the second screen
+```
+```
+View done tasks in the third screen
+```
+
+###### Template Sample from [Readme Template](https://github.com/iuricode/readme-template)
+
+[⬆ Back](#ProjectName)<br>
+
